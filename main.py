@@ -15,7 +15,6 @@ cat_photos = [
 @app.route('/')
 def index():
     serve_cats = os.environ.get('SERVE_CATS')
-    serve_cats = True
     if serve_cats:
         random_cat_photo = random.choice(cat_photos)
         return render_template('index.html', cat_photo=random_cat_photo)
