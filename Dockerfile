@@ -12,8 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the current directory contents into the container at /app
 COPY . /app/
-
-COPY cats/ /app/cats
+COPY templates /app/templates
+COPY static/cats/ /app/static/cats
 
 # Expose the port the app runs on
 EXPOSE 5000
